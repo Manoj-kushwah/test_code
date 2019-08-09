@@ -1,0 +1,27 @@
+<html>
+<head>
+    <% include header %>
+</head>
+
+<body>
+<h1>Express</h1>
+<p>Welcome to Express</p>
+<div>
+    <h1>Users <%= id%></h1>
+    <ul>
+        <li><a href="users/create">Create +</a></li>
+        <li><a href="users/list">List</a></li>
+    </ul>
+</div>
+<% for(var i in list){ %>
+    <br><%= list[i]%>
+<%}%>
+<%= (typeof user=='string'? 'yes' : 'no') %>
+<% if (typeof user == 'object') {
+for(var key in user){ %>
+    <br><%= key+': '+user[key]%>
+<%}
+}%>
+</body>
+
+</html>

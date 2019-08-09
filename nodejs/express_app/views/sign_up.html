@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include header %>
+</head>
+<body>
+<center>
+    <form method="post">
+        <table>
+            <% if (error!=null){ %>
+            <tr>
+                <td colspan="10" align="center"><span class="error"><%= error%></span></td>
+            </tr>
+            <%}%>
+            <tr>
+                <td>First Name</td><td>:</td><td><input name="firstName" type="text" required autofocus="autofocus" title="User first name" placeholder="user first name"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td><td>:</td><td><input name="lastName" type="text" required title="User last name" placeholder="user last name"></td>
+            </tr>
+            <tr>
+                <td>Email</td><td>:</td><td><input name="email" type="email" required title="User email" placeholder="user email"></td>
+            </tr>
+            <tr>
+                <td>Password</td><td>:</td><td><input name="password" type="password" required title="User password" placeholder="user password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td><td>:</td><td><input name="confirmPassword" type="password" required title="User confirm password" placeholder="user confirm password"></td>
+            </tr>
+            <tr>
+                <td>DOB</td><td>:</td><td><input name="dob" type="date" required  title="User dob" placeholder="user dob"></td>
+            </tr>
+            <tr>
+                <td>Gender</td><td>:</td>
+                <td>
+                    <select name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td><td></td><td><input type="submit" value="Sign up" /></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
