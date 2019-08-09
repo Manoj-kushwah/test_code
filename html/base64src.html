@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Base</title>
+</head>
+<body>
+<input type="file" name="file" onchange="fileLoad(this)" />
+<div id="output"></div>
+<script type="text/javascript">
+	function fileLoad(self) {
+		console.log(self);
+		var input = self;
+
+	    var reader = new FileReader();
+	    reader.onload = function(){
+	      var dataURL = reader.result;
+	      console.log('dataURL:',dataURL);
+	      var output = document.getElementById('output');
+	      output.src = dataURL;
+	    };
+	    reader.readAsDataURL(input.files[0]);
+	}
+</script>
+</body>
+</html>
