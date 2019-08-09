@@ -1,0 +1,21 @@
+<html>
+<head>
+<!-- <script type="text/javascript" src="jquery.js"></script> -->
+<script type="text/javascript" src="html2canvas.js"></script>
+<script>
+function take_screenshot()
+{
+	html2canvas(document.body).then(canvas => {
+		console.log('toDataURL: ', canvas.toDataURL());
+	    document.body.appendChild(canvas)
+	    var img = canvas.toDataURL()
+	    $.post("save_screenshot.php", {data: img}, function (file){
+			window.location.href =  "save_screenshot.php?file="+ file
+	    });
+	});
+}
+</script>
+<body>
+  <button type="button" onclick="take_screenshot()">Take Screenshot</button>
+</body>
+</html>
