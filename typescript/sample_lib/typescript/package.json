@@ -1,0 +1,7 @@
+{
+  "name": "libuser",
+  "dependencies": {
+    "reflect-metadata": "^0.1.12",
+    "symbol": "^0.3.1"
+  }
+}
