@@ -1,0 +1,51 @@
+RewriteEngine on
+RewriteRule ^((?!index\.php).+)$ ./index.php [L]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} !^/$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule .* /admin/index.php [L,R=302]
+# X-XSS-Protection
+# <IfModule mod_headers.c>
+# Header add Access-Control-Allow-Headers: "Content-Type"
+# </IfModule>
+
+#RewriteEngine on
+#RewriteCond %{REQUEST_URI} !^/$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteEngine on
+#RewriteRule ^((?!index\.php).+)$ ./index.php [L]
+
+#<IfModule mod_headers.c>
+#    RewriteEngine on
+#    RewriteRule ^((?!index\.php).+)$ ./index.php [L]
+#</IfModule>
+
+#RewriteCond "%{HTTP_HOST}" "(.*)"
+#RewriteRule "^/(.*)" "./index.php$1"
+
+#RewriteEngine On
+#
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?_REQUEST=$1 [L]
