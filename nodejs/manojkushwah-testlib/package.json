@@ -1,0 +1,16 @@
+{
+  "name": "manojkushwah-testlib-code",
+  "version": "1.0.1",
+  "description": "This is test lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "manojkushwah",
+  "license": "ISC",
+  "keywords": [
+    "npm",
+    "npm-manojkushwah-testlib-code",
+    "manojkushwah-testlib-code"
+  ]
+}
